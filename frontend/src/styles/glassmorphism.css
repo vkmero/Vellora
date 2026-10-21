@@ -1,0 +1,308 @@
+/**
+ * VELLORA — PASTEL INTELLIGENCE SURFACE SYSTEM
+ * Refined glassmorphic surfaces, subtle pastel tinting, and high-contrast accessible typography.
+ */
+
+/* 1. Primary Pastel Glass Panels (Main dashboard cards, analytical frames) */
+.glass-panel,
+.glass-surface-primary,
+.vellora-card-hero {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  border-radius: var(--radius-lg, 18px);
+  box-shadow: var(--shadow-pastel-md, 0 6px 20px -2px rgba(23, 37, 84, 0.06));
+  color: var(--vellora-ink, #18233B);
+  transition: all var(--transition-normal, 250ms ease);
+}
+
+/* Light-toned Primary Glass Panel (auth cards and high-clarity forms) */
+.glass-panel-light,
+.auth-glass-panel {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  border-radius: var(--radius-xl, 24px);
+  box-shadow: 0 20px 45px -10px rgba(23, 37, 84, 0.08), 0 4px 12px -2px rgba(23, 37, 84, 0.03);
+  color: var(--vellora-ink, #18233B);
+}
+
+/* 2. Secondary Glass Panels (Metric cards, filters, supporting widgets) */
+.glass-panel-secondary,
+.glass-card,
+.vellora-card {
+  background: #FFFFFF;
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  border-radius: var(--radius-lg, 18px);
+  box-shadow: var(--shadow-pastel-sm, 0 2px 8px -1px rgba(23, 37, 84, 0.04));
+  color: var(--vellora-ink, #18233B);
+  transition: all var(--transition-normal, 250ms ease);
+}
+
+.glass-panel-secondary:hover,
+.glass-card:hover,
+.vellora-card-interactive:hover {
+  background: #FFFFFF;
+  border-color: var(--page-accent-border, #A9DFFF);
+  box-shadow: var(--shadow-pastel-hover, 0 14px 34px -4px rgba(23, 37, 84, 0.10));
+  transform: translateY(-2px);
+}
+
+/* Elevated Focus Glass Card */
+.glass-panel-elevated,
+.glass-card-elevated {
+  background: #FFFFFF;
+  border: 1px solid var(--page-accent-border, #A9DFFF);
+  border-radius: var(--radius-lg, 18px);
+  box-shadow: var(--shadow-pastel-lg, 0 12px 32px -4px rgba(23, 37, 84, 0.08));
+  color: var(--vellora-ink, #18233B);
+}
+
+/* 3. Navigation Glass (Header & Sidebar) */
+.glass-nav {
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--vellora-border, #E4E7EF);
+  box-shadow: 0 2px 10px -2px rgba(23, 37, 84, 0.04);
+  color: var(--vellora-navy, #172554);
+}
+
+/* Floating Clean Sidebar */
+.glass-sidebar {
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-right: 1px solid var(--vellora-border, #E4E7EF);
+  box-shadow: 4px 0 20px -2px rgba(23, 37, 84, 0.03);
+}
+
+/* Sidebar Item Active Highlight */
+.nav-item-active {
+  background: var(--page-accent-pale, #EFF6FF);
+  border: 1px solid var(--page-accent-border, #DCEBFF);
+  color: var(--vellora-navy, #172554);
+  font-weight: 700;
+}
+
+/* Sidebar Item Hover */
+.nav-item-hover:hover {
+  background: rgba(23, 37, 84, 0.04);
+  color: var(--vellora-navy, #172554);
+}
+
+/* 4. Controls & Input Fields */
+.glass-input,
+.auth-input,
+.input-field {
+  background: #FFFFFF;
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  color: var(--vellora-ink, #18233B);
+  border-radius: var(--radius-md, 14px);
+  transition: all var(--transition-fast, 150ms ease);
+  box-shadow: 0 1px 2px 0 rgba(23, 37, 84, 0.03);
+}
+
+.glass-input:focus,
+.auth-input:focus,
+.input-field:focus {
+  background: #FFFFFF;
+  border-color: var(--page-accent, #2563A6);
+  outline: none;
+  box-shadow: var(--focus-ring, 0 0 0 3px rgba(37, 99, 166, 0.25));
+}
+
+.glass-input::placeholder,
+.auth-input::placeholder,
+.input-field::placeholder {
+  color: var(--vellora-muted, #718096);
+}
+
+/* 5. Buttons — Pastel Intelligence Specification */
+.btn-primary,
+.btn-auth-primary,
+.btn-glass-primary {
+  background: var(--vellora-navy, #172554);
+  color: #FFFFFF !important;
+  border: 1px solid var(--vellora-navy-midnight, #1E3A5F);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px -2px rgba(23, 37, 84, 0.16);
+  transition: all var(--transition-fast, 150ms ease);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-auth-primary:hover,
+.btn-glass-primary:hover {
+  background: var(--vellora-navy-midnight, #1E3A5F);
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 16px -2px rgba(23, 37, 84, 0.22);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active,
+.btn-auth-primary:active,
+.btn-glass-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary,
+.btn-glass-secondary {
+  background: var(--page-accent-soft, #D8F0FF);
+  color: var(--page-accent-text, #172554) !important;
+  border: 1px solid var(--page-accent-border, #A9DFFF);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(23, 37, 84, 0.04);
+  transition: all var(--transition-fast, 150ms ease);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover,
+.btn-glass-secondary:hover {
+  background: var(--page-accent-pale, #EFF9FF);
+  border-color: var(--page-accent, #2563A6);
+  color: var(--vellora-navy, #172554) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px -2px rgba(23, 37, 84, 0.08);
+}
+
+.btn-success {
+  background: var(--vellora-mint-pale, #E3F8EE);
+  color: var(--vellora-mint-deep, #168F79) !important;
+  border: 1px solid var(--vellora-mint-soft, #BDEFE0);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+}
+.btn-success:hover {
+  background: #C7F3DF;
+  transform: translateY(-1px);
+}
+
+.btn-warning {
+  background: var(--vellora-gold-soft, #FFF8DC);
+  color: var(--vellora-gold-deep, #B7791F) !important;
+  border: 1px solid var(--vellora-yellow-soft, #FFE7A3);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+}
+.btn-warning:hover {
+  background: #FEEFB3;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: var(--vellora-peach-pale, #FFF0E6);
+  color: var(--vellora-coral-deep, #D87563) !important;
+  border: 1px solid var(--vellora-peach-soft, #FFD8C5);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+}
+.btn-danger:hover {
+  background: #FFE3D1;
+  transform: translateY(-1px);
+}
+
+.btn-info {
+  background: var(--vellora-sky-pale, #EFF9FF);
+  color: var(--vellora-royal-blue, #2563A6) !important;
+  border: 1px solid var(--vellora-sky-soft, #D8F0FF);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+}
+.btn-info:hover {
+  background: #DCEEFF;
+  transform: translateY(-1px);
+}
+
+/* 6. Tables — Clean Pastel Architecture */
+.vellora-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-md, 14px);
+  overflow: hidden;
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-pastel-sm, 0 2px 8px -1px rgba(23, 37, 84, 0.04));
+  color: var(--vellora-ink, #18233B);
+}
+
+.vellora-table th {
+  background: #F8FAFC;
+  color: var(--vellora-navy, #172554);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--vellora-border, #E4E7EF);
+  text-align: left;
+}
+
+.vellora-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--vellora-border-subtle, #F0F2F7);
+  color: var(--vellora-slate, #43516A);
+  font-size: 0.8125rem;
+  background: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.vellora-table tr:last-child td {
+  border-bottom: none;
+}
+
+.vellora-table tr:hover td {
+  background: var(--page-accent-pale, #EFF9FF);
+  color: var(--vellora-ink, #18233B);
+}

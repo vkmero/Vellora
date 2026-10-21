@@ -1,0 +1,59 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Uploads and generated reports
+uploads/original/*
+!uploads/original/.gitkeep
+uploads/cleaned/*
+!uploads/cleaned/.gitkeep
+reports/pdf/*
+!reports/pdf/.gitkeep
+reports/excel/*
+!reports/excel/.gitkeep
+backend/uploads/original/*
+!backend/uploads/original/.gitkeep
+backend/uploads/cleaned/*
+!backend/uploads/cleaned/.gitkeep
+backend/reports/pdf/*
+!backend/reports/pdf/.gitkeep
+backend/reports/excel/*
+!backend/reports/excel/.gitkeep
+backend/reports/presentations/*
+!backend/reports/presentations/.gitkeep
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Avoid accidentally committing duplicate/temporary frontend copies
+fe/
+*.zip

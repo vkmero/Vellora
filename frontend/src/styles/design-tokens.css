@@ -1,0 +1,358 @@
+/**
+ * VELLORA — PASTEL INTELLIGENCE DESIGN SYSTEM TOKENS
+ * Derived from the "My Daily Timetable — Study, Grow, Succeed" Reference Image
+ */
+
+:root {
+  /* ==========================================================================
+     1. REFERENCE IMAGE COLOUR PALETTE FOUNDATION
+     ========================================================================== */
+
+  /* A. Navy Blue — Primary Brand */
+  --vellora-navy: #172554;
+  --vellora-navy-midnight: #1E3A5F;
+  --vellora-royal-blue: #2563A6;
+  --vellora-navy-soft: #DCEBFF;
+  --vellora-navy-pale: #EFF6FF;
+
+  /* B. Sky Blue — Analytics Theme */
+  --vellora-sky: #69BFF5;
+  --vellora-sky-strong: #69BFF5;
+  --vellora-sky-light: #A9DFFF;
+  --vellora-sky-soft: #D8F0FF;
+  --vellora-sky-pale: #EFF9FF;
+
+  /* C. Mint Green — Data Quality Theme */
+  --vellora-mint: #42BFA3;
+  --vellora-mint-deep: #168F79;
+  --vellora-mint-soft: #BDEFE0;
+  --vellora-mint-pale: #E3F8EE;
+
+  /* D. Lavender — Data Science Theme */
+  --vellora-lavender: #A99AE8;
+  --vellora-lavender-deep: #7665B5;
+  --vellora-lavender-soft: #DCD4FF;
+  --vellora-lavender-pale: #F2EEFF;
+
+  /* E. Peach and Coral — Insights Theme */
+  --vellora-coral: #F29A87;
+  --vellora-coral-deep: #D87563;
+  --vellora-peach-soft: #FFD8C5;
+  --vellora-peach-pale: #FFF0E6;
+
+  /* F. Blush Pink — Projects Theme */
+  --vellora-rose: #E68BB3;
+  --vellora-rose-deep: #B84F79;
+  --vellora-rose-soft: #F8C9DC;
+  --vellora-rose-pale: #FFF0F6;
+
+  /* G. Golden Yellow — Highlight / Approvals Theme */
+  --vellora-gold: #E9B949;
+  --vellora-gold-deep: #B7791F;
+  --vellora-yellow-soft: #FFE7A3;
+  --vellora-gold-soft: #FFF8DC;
+
+  /* H. Warm Cream — Global Background & Neutrals */
+  --vellora-cream: #FFF9F0;
+  --vellora-ivory: #FFFDF8;
+  --vellora-beige: #F6E8D5;
+  --vellora-sand: #E9D5B5;
+
+  /* I. Contrast, Borders, and Neutral Typography */
+  --vellora-ink: #18233B;
+  --vellora-slate: #43516A;
+  --vellora-muted: #718096;
+  --vellora-border: #E4E7EF;
+  --vellora-border-subtle: #F0F2F7;
+  --vellora-border-warm: #EADFD0;
+  --vellora-white: #FFFFFF;
+
+  /* ==========================================================================
+     2. GLOBAL SEMANTIC TOKENS
+     ========================================================================== */
+  --color-bg-primary: var(--vellora-cream);
+  --color-bg-secondary: var(--vellora-ivory);
+  --color-surface: var(--vellora-white);
+  --color-surface-elevated: var(--vellora-white);
+  --color-surface-card: var(--vellora-white);
+  --color-surface-warm: var(--vellora-ivory);
+
+  --color-text-primary: var(--vellora-ink);
+  --color-text-secondary: var(--vellora-slate);
+  --color-text-muted: var(--vellora-muted);
+
+  --color-border: var(--vellora-border);
+  --color-border-subtle: var(--vellora-border-subtle);
+
+  /* Semantic Status Tokens */
+  --color-status-success: var(--vellora-mint-deep);
+  --color-status-success-bg: var(--vellora-mint-pale);
+  --color-status-success-border: var(--vellora-mint-soft);
+
+  --color-status-warning: var(--vellora-gold-deep);
+  --color-status-warning-bg: var(--vellora-gold-soft);
+  --color-status-warning-border: var(--vellora-yellow-soft);
+
+  --color-status-danger: var(--vellora-coral-deep);
+  --color-status-danger-bg: var(--vellora-peach-pale);
+  --color-status-danger-border: var(--vellora-peach-soft);
+
+  --color-status-info: var(--vellora-royal-blue);
+  --color-status-info-bg: var(--vellora-sky-pale);
+  --color-status-info-border: var(--vellora-sky-soft);
+
+  /* Interactive Elements */
+  --focus-ring: 0 0 0 3px rgba(37, 99, 166, 0.25);
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Geometry */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows — Soft, Restrained Pastel Shadows */
+  --shadow-pastel-sm: 0 2px 8px -1px rgba(23, 37, 84, 0.04), 0 1px 3px 0 rgba(23, 37, 84, 0.02);
+  --shadow-pastel-md: 0 6px 20px -2px rgba(23, 37, 84, 0.06), 0 2px 6px -1px rgba(23, 37, 84, 0.03);
+  --shadow-pastel-lg: 0 12px 32px -4px rgba(23, 37, 84, 0.08), 0 4px 10px -2px rgba(23, 37, 84, 0.03);
+  --shadow-pastel-hover: 0 14px 36px -4px rgba(23, 37, 84, 0.10), 0 6px 14px -2px rgba(23, 37, 84, 0.04);
+
+  /* Default Page Accent */
+  --page-accent: var(--vellora-royal-blue);
+  --page-accent-secondary: var(--vellora-sky);
+  --page-accent-soft: var(--vellora-sky-soft);
+  --page-accent-border: var(--vellora-sky-light);
+  --page-accent-text: var(--vellora-navy);
+}
+
+/* ==========================================================================
+   3. PAGE-SPECIFIC UNIQUE COLOUR THEMES
+   ========================================================================== */
+
+/* Page 1: Auth & Login (Navy + Sky Blue) */
+.theme-auth,
+.theme-login,
+[data-theme="auth"],
+[data-page-theme="auth"] {
+  --page-accent: #172554;
+  --page-accent-secondary: #2563A6;
+  --page-accent-soft: #DCEBFF;
+  --page-accent-pale: #EFF6FF;
+  --page-accent-border: #A9DFFF;
+  --page-accent-text: #172554;
+  --page-badge-bg: #DCEBFF;
+  --page-badge-text: #172554;
+  --page-banner-bg: linear-gradient(135deg, #EFF6FF 0%, #DCEBFF 100%);
+}
+
+/* Page 2: Overview Dashboard (Sky Blue + Navy) */
+.theme-dashboard,
+.theme-home,
+[data-theme="dashboard"],
+[data-page-theme="dashboard"] {
+  --page-accent: #2563A6;
+  --page-accent-secondary: #69BFF5;
+  --page-accent-soft: #D8F0FF;
+  --page-accent-pale: #EFF9FF;
+  --page-accent-border: #A9DFFF;
+  --page-accent-text: #172554;
+  --page-badge-bg: #D8F0FF;
+  --page-badge-text: #2563A6;
+  --page-banner-bg: linear-gradient(135deg, #EFF9FF 0%, #D8F0FF 100%);
+}
+
+/* Page 3: Datasets (Mint + Sky Blue) */
+.theme-datasets,
+[data-theme="datasets"],
+[data-page-theme="datasets"] {
+  --page-accent: #168F79;
+  --page-accent-secondary: #42BFA3;
+  --page-accent-soft: #BDEFE0;
+  --page-accent-pale: #E3F8EE;
+  --page-accent-border: #BDEFE0;
+  --page-accent-text: #168F79;
+  --page-badge-bg: #E3F8EE;
+  --page-badge-text: #168F79;
+  --page-banner-bg: linear-gradient(135deg, #E3F8EE 0%, #EFF9FF 100%);
+}
+
+/* Page 4: Data Upload (Sky Blue + Mint) */
+.theme-upload,
+[data-theme="upload"],
+[data-page-theme="upload"] {
+  --page-accent: #2563A6;
+  --page-accent-secondary: #42BFA3;
+  --page-accent-soft: #D8F0FF;
+  --page-accent-pale: #E3F8EE;
+  --page-accent-border: #A9DFFF;
+  --page-accent-text: #172554;
+  --page-badge-bg: #D8F0FF;
+  --page-badge-text: #2563A6;
+  --page-banner-bg: linear-gradient(135deg, #EFF9FF 0%, #E3F8EE 100%);
+}
+
+/* Page 5: Data Quality, Cleaning & Validation (Mint Green + Golden Yellow) */
+.theme-quality,
+.theme-cleaning,
+.theme-validation,
+[data-theme="quality"],
+[data-page-theme="quality"],
+[data-page-theme="cleaning"],
+[data-page-theme="validation"] {
+  --page-accent: #168F79;
+  --page-accent-secondary: #E9B949;
+  --page-accent-soft: #BDEFE0;
+  --page-accent-pale: #E3F8EE;
+  --page-accent-border: #BDEFE0;
+  --page-accent-text: #168F79;
+  --page-badge-bg: #E3F8EE;
+  --page-badge-text: #168F79;
+  --page-banner-bg: linear-gradient(135deg, #E3F8EE 0%, #FFF8DC 100%);
+}
+
+/* Page 6: Analytics & Visualizations (Sky Blue + Gold) */
+.theme-analytics,
+.theme-visualizations,
+[data-theme="analytics"],
+[data-theme="visualizations"],
+[data-page-theme="analytics"],
+[data-page-theme="visualizations"] {
+  --page-accent: #2563A6;
+  --page-accent-secondary: #E9B949;
+  --page-accent-soft: #D8F0FF;
+  --page-accent-pale: #EFF9FF;
+  --page-accent-border: #A9DFFF;
+  --page-accent-text: #172554;
+  --page-badge-bg: #D8F0FF;
+  --page-badge-text: #2563A6;
+  --page-banner-bg: linear-gradient(135deg, #EFF9FF 0%, #FFF8DC 100%);
+}
+
+/* Page 7: Insights (Peach + Coral) */
+.theme-insights,
+[data-theme="insights"],
+[data-page-theme="insights"] {
+  --page-accent: #D87563;
+  --page-accent-secondary: #F29A87;
+  --page-accent-soft: #FFD8C5;
+  --page-accent-pale: #FFF0E6;
+  --page-accent-border: #FFD8C5;
+  --page-accent-text: #D87563;
+  --page-badge-bg: #FFF0E6;
+  --page-badge-text: #D87563;
+  --page-banner-bg: linear-gradient(135deg, #FFF0E6 0%, #FFF9F0 100%);
+}
+
+/* Page 8: Data Science & Predictions (Lavender + Sky Blue) */
+.theme-datascience,
+.theme-predictions,
+[data-theme="datascience"],
+[data-theme="predictions"],
+[data-page-theme="datascience"],
+[data-page-theme="predictions"] {
+  --page-accent: #7665B5;
+  --page-accent-secondary: #69BFF5;
+  --page-accent-soft: #DCD4FF;
+  --page-accent-pale: #F2EEFF;
+  --page-accent-border: #DCD4FF;
+  --page-accent-text: #7665B5;
+  --page-badge-bg: #F2EEFF;
+  --page-badge-text: #7665B5;
+  --page-banner-bg: linear-gradient(135deg, #F2EEFF 0%, #EFF9FF 100%);
+}
+
+/* Page 9: Projects & Pipeline (Blush Pink + Navy) */
+.theme-projects,
+.theme-workflow,
+.theme-deliverables,
+.theme-results,
+[data-theme="projects"],
+[data-page-theme="projects"],
+[data-page-theme="workflow"],
+[data-page-theme="deliverables"],
+[data-page-theme="results"] {
+  --page-accent: #B84F79;
+  --page-accent-secondary: #172554;
+  --page-accent-soft: #F8C9DC;
+  --page-accent-pale: #FFF0F6;
+  --page-accent-border: #F8C9DC;
+  --page-accent-text: #B84F79;
+  --page-badge-bg: #FFF0F6;
+  --page-badge-text: #B84F79;
+  --page-banner-bg: linear-gradient(135deg, #FFF0F6 0%, #EFF6FF 100%);
+}
+
+/* Page 10: Approvals & Governance (Golden Yellow + Mint) */
+.theme-approvals,
+.theme-manager,
+[data-theme="approvals"],
+[data-theme="manager"],
+[data-page-theme="approvals"],
+[data-page-theme="manager"] {
+  --page-accent: #B7791F;
+  --page-accent-secondary: #42BFA3;
+  --page-accent-soft: #FFE7A3;
+  --page-accent-pale: #FFF8DC;
+  --page-accent-border: #FFE7A3;
+  --page-accent-text: #B7791F;
+  --page-badge-bg: #FFF8DC;
+  --page-badge-text: #B7791F;
+  --page-banner-bg: linear-gradient(135deg, #FFF8DC 0%, #E3F8EE 100%);
+}
+
+/* Page 11: Admin Panel (Navy + Warm Gold) */
+.theme-admin,
+[data-theme="admin"],
+[data-page-theme="admin"] {
+  --page-accent: #172554;
+  --page-accent-secondary: #E9B949;
+  --page-accent-soft: #DCEBFF;
+  --page-accent-pale: #EFF6FF;
+  --page-accent-border: #DCEBFF;
+  --page-accent-text: #172554;
+  --page-badge-bg: #EFF6FF;
+  --page-badge-text: #172554;
+  --page-banner-bg: linear-gradient(135deg, #EFF6FF 0%, #FFF8DC 100%);
+}
+
+/* Page 12: Profile & Settings (Warm Cream + Mint) */
+.theme-settings,
+.theme-profile,
+[data-theme="settings"],
+[data-theme="profile"],
+[data-page-theme="settings"],
+[data-page-theme="profile"] {
+  --page-accent: #168F79;
+  --page-accent-secondary: #42BFA3;
+  --page-accent-soft: #F6E8D5;
+  --page-accent-pale: #FFF9F0;
+  --page-accent-border: #E9D5B5;
+  --page-accent-text: #168F79;
+  --page-badge-bg: #E3F8EE;
+  --page-badge-text: #168F79;
+  --page-banner-bg: linear-gradient(135deg, #FFF9F0 0%, #E3F8EE 100%);
+}
+
+/* Page 13: Reports & History (Blush Pink + Sky Blue) */
+.theme-reports,
+.theme-history,
+.theme-summaries,
+[data-theme="reports"],
+[data-theme="history"],
+[data-theme="summaries"],
+[data-page-theme="reports"],
+[data-page-theme="history"],
+[data-page-theme="summaries"] {
+  --page-accent: #B84F79;
+  --page-accent-secondary: #2563A6;
+  --page-accent-soft: #F8C9DC;
+  --page-accent-pale: #FFF0F6;
+  --page-accent-border: #F8C9DC;
+  --page-accent-text: #B84F79;
+  --page-badge-bg: #FFF0F6;
+  --page-badge-text: #B84F79;
+  --page-banner-bg: linear-gradient(135deg, #FFF0F6 0%, #EFF9FF 100%);
+}

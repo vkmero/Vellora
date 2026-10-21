@@ -1,0 +1,413 @@
+@import './design-tokens.css';
+@import './glassmorphism.css';
+@import './animations.css';
+@import './responsive.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   VELLORA — PASTEL INTELLIGENCE DESIGN SYSTEM
+   Master Spec: Study, Grow, Succeed Palette • Warm Cream Shell • Page Identities
+   ========================================================================== */
+
+/* Universal Heading & Typography Styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: var(--vellora-navy, #172554);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: var(--vellora-cream, #FFF9F0);
+  color: var(--vellora-ink, #18233B);
+}
+
+/* ==========================================================================
+   PASTEL GRADIENT TEXT & RESTRAINED ACCENTS
+   ========================================================================== */
+.text-gradient-navy {
+  background: linear-gradient(135deg, #172554 0%, #2563A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-sky,
+.text-gradient-cerulean,
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #172554 0%, #2563A6 45%, #69BFF5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-mint,
+.text-gradient-emerald,
+.text-gradient-teal {
+  background: linear-gradient(135deg, #168F79 0%, #42BFA3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-lavender,
+.text-gradient-violet {
+  background: linear-gradient(135deg, #7665B5 0%, #A99AE8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-coral,
+.text-gradient-fuchsia {
+  background: linear-gradient(135deg, #D87563 0%, #F29A87 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-rose {
+  background: linear-gradient(135deg, #B84F79 0%, #E68BB3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-gold,
+.text-gradient-amber {
+  background: linear-gradient(135deg, #B7791F 0%, #E9B949 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-blue {
+  background: linear-gradient(135deg, #172554 0%, #2563A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   AUTHENTICATION & FORM CONTROLS
+   ========================================================================== */
+
+/* Auth Input Geometry & Alignment */
+.auth-field-group {
+  position: relative;
+  width: 100%;
+}
+
+.auth-input {
+  width: 100%;
+  height: 46px;
+  background: #FFFFFF;
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  color: var(--vellora-ink, #18233B);
+  border-radius: var(--radius-md, 14px);
+  font-size: 0.875rem;
+  padding-left: 2.75rem;
+  padding-right: 1rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px 0 rgba(23, 37, 84, 0.03);
+}
+
+.auth-input.has-trailing {
+  padding-right: 2.85rem;
+}
+
+.auth-input:focus {
+  background: #FFFFFF;
+  border-color: var(--vellora-royal-blue, #2563A6);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 166, 0.20);
+}
+
+.auth-input::placeholder {
+  color: var(--vellora-muted, #718096);
+}
+
+.auth-icon-leading {
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--vellora-muted, #718096);
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.auth-field-group:focus-within .auth-icon-leading {
+  color: var(--vellora-royal-blue, #2563A6);
+}
+
+.auth-password-toggle {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vellora-muted, #718096);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.auth-password-toggle:hover {
+  color: var(--vellora-navy, #172554);
+  background: rgba(23, 37, 84, 0.05);
+}
+
+.auth-password-toggle:focus-visible {
+  outline: 2px solid var(--vellora-royal-blue, #2563A6);
+  outline-offset: 1px;
+}
+
+/* OAuth Social Buttons */
+.btn-oauth {
+  height: 44px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid var(--vellora-border, #E4E7EF);
+  color: var(--vellora-ink, #18233B);
+  border-radius: var(--radius-md, 14px);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px 0 rgba(23, 37, 84, 0.03);
+  text-decoration: none;
+}
+
+.btn-oauth:hover {
+  background: var(--vellora-ivory, #FFFDF8);
+  border-color: var(--vellora-navy-soft, #DCEBFF);
+  color: var(--vellora-navy, #172554);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(23, 37, 84, 0.06);
+}
+
+.btn-oauth:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   SEMANTIC STATUS BADGES (PASTEL BACKGROUNDS + HIGH-CONTRAST DARK TEXT)
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-width: 1px;
+}
+
+.badge-success {
+  background: var(--vellora-mint-pale, #E3F8EE);
+  color: var(--vellora-mint-deep, #168F79);
+  border-color: var(--vellora-mint-soft, #BDEFE0);
+}
+
+.badge-warning {
+  background: var(--vellora-gold-soft, #FFF8DC);
+  color: var(--vellora-gold-deep, #B7791F);
+  border-color: var(--vellora-yellow-soft, #FFE7A3);
+}
+
+.badge-error {
+  background: var(--vellora-peach-pale, #FFF0E6);
+  color: var(--vellora-coral-deep, #D87563);
+  border-color: var(--vellora-peach-soft, #FFD8C5);
+}
+
+.badge-info {
+  background: var(--vellora-sky-pale, #EFF9FF);
+  color: var(--vellora-royal-blue, #2563A6);
+  border-color: var(--vellora-sky-soft, #D8F0FF);
+}
+
+.badge-neutral {
+  background: var(--vellora-beige, #F6E8D5);
+  color: var(--vellora-slate, #43516A);
+  border-color: var(--vellora-sand, #E9D5B5);
+}
+
+.badge-primary {
+  background: var(--page-accent-soft, #D8F0FF);
+  color: var(--page-accent-text, #172554);
+  border-color: var(--page-accent-border, #A9DFFF);
+}
+
+/* Backward compatibility badge classes */
+.badge-emerald { @apply badge-success; }
+.badge-amber { @apply badge-warning; }
+.badge-red { @apply badge-error; }
+.badge-blue { @apply badge-info; }
+.badge-cyan { @apply badge-info; }
+.badge-violet {
+  background: var(--vellora-lavender-pale, #F2EEFF);
+  color: var(--vellora-lavender-deep, #7665B5);
+  border-color: var(--vellora-lavender-soft, #DCD4FF);
+}
+.badge-slate { @apply badge-neutral; }
+
+/* ==========================================================================
+   SCROLLBAR & BASE ACCESSIBILITY STYLING
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCEBFF;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A9DFFF;
+}
+
+/* Restrained Animation System */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* ==========================================================================
+   VELLORA POLISH LAYER — GLOBAL PASTEL DEPTH, MOTION & BRAND
+   Additive styles only: existing component names, routes and APIs stay intact.
+   ========================================================================== */
+:root {
+  --vellora-gradient-brand: linear-gradient(118deg, #172554 0%, #2563A6 28%, #7665B5 54%, #B84F79 76%, #168F79 100%);
+  --vellora-gradient-pastel: linear-gradient(135deg, #EFF6FF 0%, #EFF9FF 25%, #F2EEFF 52%, #FFF0F6 74%, #E3F8EE 100%);
+  --vellora-shadow-colour: 23, 37, 84;
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 4% 0%, rgba(216,240,255,.42), transparent 34rem),
+    radial-gradient(ellipse at 96% 12%, rgba(189,239,224,.3), transparent 32rem),
+    radial-gradient(ellipse at 72% 95%, rgba(220,212,255,.26), transparent 36rem);
+  background-attachment: fixed;
+}
+::selection { background: #DCD4FF; color: #172554; }
+:focus-visible { outline-color: #2563A6; outline-offset: 3px; }
+a, button, input, select, textarea, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+button, [role="button"], a { transition-timing-function: cubic-bezier(.2,.8,.2,1); }
+button:not(:disabled):active, [role="button"]:not([aria-disabled="true"]):active { transform: translateY(1px) scale(.99); }
+button:disabled { cursor: not-allowed; opacity: .58; }
+.vellora-brand-lockup { transform-origin: left center; transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+.vellora-logo-link:hover .vellora-brand-lockup { transform: translateY(-1px); }
+.vellora-brand-mark { isolation: isolate; }
+.vellora-logo-svg { overflow: visible; filter: drop-shadow(0 3px 4px rgba(23,37,84,.12)); transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .45s ease; }
+.vellora-logo-link:hover .vellora-logo-svg, .group:hover .vellora-logo-svg {
+  transform: rotate(-4deg) scale(1.07);
+  filter: drop-shadow(0 6px 8px rgba(37,99,166,.2));
+}
+.vellora-logo-halo {
+  position: absolute; inset: -10%; z-index: 0; border-radius: 35%;
+  background: conic-gradient(from 20deg, #69BFF5, #DCD4FF, #E68BB3, #BDEFE0, #69BFF5);
+  filter: blur(10px); opacity: .5; animation: velloraLogoGlow 5s ease-in-out infinite;
+}
+.vellora-wordmark-v, .vellora-wordmark-rest {
+  background: var(--vellora-gradient-brand); background-size: 220% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: velloraGradientShift 12s ease infinite;
+}
+.vellora-wordmark-dot { background: linear-gradient(135deg, #E68BB3, #69BFF5, #42BFA3); box-shadow: 0 0 0 3px rgba(216,240,255,.7); }
+.vellora-wordmark-tag { color: #718096; }
+.glass-panel, .glass-surface-primary, .vellora-card-hero, .glass-panel-secondary, .glass-card, .vellora-card {
+  position: relative;
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease, border-color .28s ease, background .28s ease;
+}
+.glass-panel:hover, .glass-surface-primary:hover, .vellora-card-hero:hover,
+.glass-panel-secondary:hover, .glass-card:hover, .vellora-card-interactive:hover {
+  box-shadow: 0 18px 42px -14px rgba(23,37,84,.18), 0 4px 12px rgba(37,99,166,.05);
+}
+.glass-panel, .glass-surface-primary, .vellora-card-hero {
+  background-image: linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,253,248,.88));
+}
+.glass-nav, header.glass-nav, .glass-sidebar {
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+}
+.btn-primary, .btn-auth-primary, .btn-glass-primary {
+  position: relative; isolation: isolate; overflow: hidden;
+  background-image: linear-gradient(110deg, #172554, #2563A6 48%, #7665B5 78%, #168F79);
+  background-size: 220% 100%;
+  transition: transform .24s ease, box-shadow .24s ease, background-position .5s ease;
+}
+.btn-primary::after, .btn-auth-primary::after, .btn-glass-primary::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(110deg, transparent 20%, rgba(255,255,255,.22) 48%, transparent 72%);
+  transform: translateX(-120%); transition: transform .65s ease;
+}
+.btn-primary:hover, .btn-auth-primary:hover, .btn-glass-primary:hover {
+  background-position: 100% 0; transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37,99,166,.24);
+}
+.btn-primary:hover::after, .btn-auth-primary:hover::after, .btn-glass-primary:hover::after { transform: translateX(120%); }
+.btn-secondary, .btn-glass-secondary, .btn-oauth {
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+.btn-secondary:hover, .btn-glass-secondary:hover, .btn-oauth:hover {
+  transform: translateY(-2px); box-shadow: 0 8px 20px rgba(23,37,84,.07);
+}
+input, select, textarea, .auth-input, .glass-input, .input-field {
+  transition: border-color .22s ease, box-shadow .22s ease, background .22s ease;
+}
+input:focus, select:focus, textarea:focus, .auth-input:focus, .glass-input:focus, .input-field:focus {
+  box-shadow: 0 0 0 4px rgba(105,191,245,.18);
+}
+table tbody tr { transition: background-color .18s ease; }
+table tbody tr:hover { background-color: rgba(216,240,255,.35); }
+.badge, [class*="status-badge"], [class*="StatusBadge"] { transition: transform .2s ease, box-shadow .2s ease; }
+[class*="skeleton"] { background-image: linear-gradient(100deg, #F0F2F7 20%, #FFF 40%, #E3F8EE 50%, #F0F2F7 60%); background-size: 220% 100%; animation: velloraGradientShift 2s linear infinite; }
+[data-page-theme="dashboard"], [data-page-theme="analytics"], [data-page-theme="quality"],
+[data-page-theme="insights"], [data-page-theme="datascience"], [data-page-theme="projects"],
+[data-page-theme="approvals"], [data-page-theme="admin"], [data-page-theme="settings"] {
+  --page-accent: var(--vellora-royal-blue);
+  --page-accent-soft: var(--vellora-sky-soft);
+  --page-accent-pale: var(--vellora-sky-pale);
+  --page-accent-border: var(--vellora-sky-light);
+}
+[data-page-theme="quality"] { --page-accent: #168F79; --page-accent-soft: #BDEFE0; --page-accent-pale: #E3F8EE; --page-accent-border: #BDEFE0; }
+[data-page-theme="analytics"] { --page-accent: #2563A6; --page-accent-soft: #D8F0FF; --page-accent-pale: #EFF9FF; --page-accent-border: #A9DFFF; }
+[data-page-theme="insights"] { --page-accent: #D87563; --page-accent-soft: #FFD8C5; --page-accent-pale: #FFF0E6; --page-accent-border: #FFD8C5; }
+[data-page-theme="datascience"] { --page-accent: #7665B5; --page-accent-soft: #DCD4FF; --page-accent-pale: #F2EEFF; --page-accent-border: #DCD4FF; }
+[data-page-theme="projects"] { --page-accent: #B84F79; --page-accent-soft: #F8C9DC; --page-accent-pale: #FFF0F6; --page-accent-border: #F8C9DC; }
+[data-page-theme="approvals"] { --page-accent: #B7791F; --page-accent-soft: #FFE7A3; --page-accent-pale: #FFF8DC; --page-accent-border: #FFE7A3; }
+[data-page-theme="admin"] { --page-accent: #172554; --page-accent-soft: #DCEBFF; --page-accent-pale: #EFF6FF; --page-accent-border: #DCEBFF; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
